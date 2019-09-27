@@ -1,9 +1,6 @@
 package com.revanwang.ssh.rbac.web.action;
 
-import com.mysql.cj.x.protobuf.MysqlxPrepare;
 import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.Preparable;
 import com.revanwang.ssh.rbac.domain.Department;
 import com.revanwang.ssh.rbac.domain.Employee;
 import com.revanwang.ssh.rbac.service.IDepartmentService;
@@ -14,9 +11,8 @@ import lombok.Setter;
 import java.util.List;
 
 
-public class EmployeeAction extends ActionSupport implements Preparable {
+public class EmployeeAction extends BaseAction {
 
-    private final String LIST = "list";
 
     @Setter
     private IEmployeeService employeeService;
@@ -30,8 +26,8 @@ public class EmployeeAction extends ActionSupport implements Preparable {
         System.out.println("EmployeeAction.execute");
         List<Employee> employees = employeeService.getList();
         List<Department> departments = departmentService.getList();
-        ActionContext.getContext().put("employees", employees);
-        ActionContext.getContext().put("depts", departments);
+        ActionContextPut("employees", employees);
+        ActionContextPut("depts", departments);
         return LIST;
     }
 
@@ -39,7 +35,7 @@ public class EmployeeAction extends ActionSupport implements Preparable {
     public String input() throws Exception {
         System.out.println("DepartmentAction.input" + employee);
         List<Department> departments = departmentService.getList();
-        ActionContext.getContext().put("depts", departments);
+        ActionContextPut("depts", departments);
         if (employee.getId() != null) {
             employee = employeeService.get(employee.getId());
         }
@@ -69,15 +65,6 @@ public class EmployeeAction extends ActionSupport implements Preparable {
         return SUCCESS;
     }
 
-
-    /**
-     * 会拦截所有的方法
-     * 会在所有action执行前执行
-     */
-    @Override
-    public void prepare() throws Exception {
-    }
-
     /**
      * 只会在 saveOrUpdate方法执行前执行
      * 默认拦截器栈defaultStack，prepare拦截器是在params拦截器前
@@ -85,8 +72,11 @@ public class EmployeeAction extends ActionSupport implements Preparable {
      * 需要换一个拦截器栈paramsPrepareParamsStack
      */
     public void prepareSaveOrUpdate() {
+        System.out.println("EmployeeAction.prepareSaveOrUpdate_1:" + employee);
         if (employee.getId() != null) {
+            System.out.println("EmployeeAction.prepareSaveOrUpdate_2:" + employeeService.get(employee.getId()));
             employee = employeeService.get(employee.getId());
+            System.out.println("EmployeeAction.prepareSaveOrUpdate_3:" + employee);
         }
     }
 }

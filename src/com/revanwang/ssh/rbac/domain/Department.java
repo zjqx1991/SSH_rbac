@@ -6,9 +6,8 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class Department {
+public class Department extends BaseDomain {
 
-    private Long        id;
     private String      name;
     private String      sn;
 

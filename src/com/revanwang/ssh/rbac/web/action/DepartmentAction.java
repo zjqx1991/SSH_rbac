@@ -1,7 +1,6 @@
 package com.revanwang.ssh.rbac.web.action;
 
 import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.ActionSupport;
 import com.revanwang.ssh.rbac.domain.Department;
 import com.revanwang.ssh.rbac.service.IDepartmentService;
 import lombok.Getter;
@@ -9,9 +8,8 @@ import lombok.Setter;
 
 import java.util.List;
 
-public class DepartmentAction extends ActionSupport {
+public class DepartmentAction extends BaseAction {
 
-    private final String LIST = "list";
     @Setter
     private IDepartmentService departmentService;
 
@@ -21,7 +19,7 @@ public class DepartmentAction extends ActionSupport {
     public String list() throws Exception {
         List<Department> list = this.departmentService.getList();
         System.out.println("DepartmentAction.list");
-        ActionContext.getContext().put("department", list);
+        ActionContextPut("department", list);
         return LIST;
     }
 
@@ -29,7 +27,7 @@ public class DepartmentAction extends ActionSupport {
     public String execute() throws Exception {
         List<Department> list = this.departmentService.getList();
         System.out.println("DepartmentAction.execute");
-        ActionContext.getContext().put("department", list);
+        ActionContextPut("department", list);
         return LIST;
     }
 
