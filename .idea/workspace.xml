@@ -7,21 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ba4e8c-29cc-445a-a9b0-963c756bdddf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IGenericDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/GenericDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/query/EmployeeQueryObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/DepartmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/DepartmentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/EmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/EmployeeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IDepartmentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IDepartmentDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IEmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IEmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/DepartmentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/DepartmentDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IGenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IGenericDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/EmployeeDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/EmployeeDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/IDepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/IDepartmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/GenericDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/GenericDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/IEmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/impl/DepartmentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/web/action/DepartmentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/web/action/DepartmentAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/web/action/EmployeeAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/web/action/EmployeeAction.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,17 +29,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/GenericDAOImpl.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IEmployeeDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-242">
-              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="448">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
-                <element signature="e#408#409#0" expanded="true" />
-                <element signature="e#993#994#0" expanded="true" />
-                <element signature="e#1075#1076#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/IEmployeeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/impl/EmployeeServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#961#962#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/EmployeeDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/EmployeeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="74" column="18" lean-forward="true" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1065#1066#0" expanded="true" />
+                <element signature="e#1112#1113#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/query/EmployeeQueryObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="487">
+              <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,20 +155,21 @@
         <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/domain/Department.java" />
         <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/domain/Employee.java" />
         <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/web/action/BaseAction.java" />
-        <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IEmployeeDAO.java" />
         <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IDepartmentDAO.java" />
-        <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IGenericDAO.java" />
         <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/DepartmentDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/IDepartmentService.java" />
-        <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/IEmployeeService.java" />
-        <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/impl/EmployeeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/impl/DepartmentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/web/action/EmployeeAction.java" />
         <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/web/action/DepartmentAction.java" />
         <option value="$PROJECT_DIR$/Test/DepartmentTest.java" />
-        <option value="$PROJECT_DIR$/Test/EmployeeTest.java" />
-        <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/EmployeeDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/GenericDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IGenericDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IEmployeeDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/IEmployeeService.java" />
+        <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/impl/EmployeeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/EmployeeDAOImpl.java" />
+        <option value="$PROJECT_DIR$/Test/EmployeeTest.java" />
+        <option value="$PROJECT_DIR$/src/com/revanwang/ssh/rbac/query/EmployeeQueryObject.java" />
       </list>
     </option>
   </component>
@@ -177,6 +232,20 @@
               <item name="08_SSH_rbac" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rbac" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSH_rbac" type="b2602c69:ProjectViewProjectNode" />
+              <item name="08_SSH_rbac" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rbac" type="462c0819:PsiDirectoryNode" />
+              <item name="query" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSH_rbac" type="b2602c69:ProjectViewProjectNode" />
+              <item name="08_SSH_rbac" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rbac" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -186,13 +255,6 @@
               <item name="rbac" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSH_rbac" type="b2602c69:ProjectViewProjectNode" />
-              <item name="08_SSH_rbac" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rbac" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SSH_rbac" type="b2602c69:ProjectViewProjectNode" />
@@ -260,7 +322,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.94">
+  <component name="RunManager" selected="JUnit.EmployeeTest.queryTest">
     <configuration name="EmployeeDAOImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.revanwang.ssh.rbac.dao.impl.EmployeeDAOImpl" />
       <module name="08_SSH_rbac" />
@@ -274,21 +336,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepartmentTest.getListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeTest.getListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="08_SSH_rbac" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DepartmentTest" />
+      <option name="MAIN_CLASS_NAME" value="EmployeeTest" />
       <option name="METHOD_NAME" value="getListTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmployeeTest.deleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeTest.queryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="08_SSH_rbac" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="EmployeeTest" />
-      <option name="METHOD_NAME" value="deleteTest" />
+      <option name="METHOD_NAME" value="queryTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -389,20 +451,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.DepartmentTest.getListTest" />
       <item itemvalue="JUnit.EmployeeTest.saveTest" />
-      <item itemvalue="JUnit.EmployeeTest.deleteTest" />
       <item itemvalue="JUnit.EmployeeTest.updateTest" />
       <item itemvalue="Tomcat Server.Tomcat 7.0.94" />
       <item itemvalue="Application.EmployeeDAOImpl" />
+      <item itemvalue="JUnit.EmployeeTest.getListTest" />
+      <item itemvalue="JUnit.EmployeeTest.queryTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmployeeTest.queryTest" />
+        <item itemvalue="JUnit.EmployeeTest.getListTest" />
         <item itemvalue="Application.EmployeeDAOImpl" />
         <item itemvalue="JUnit.EmployeeTest.saveTest" />
         <item itemvalue="JUnit.EmployeeTest.updateTest" />
-        <item itemvalue="JUnit.EmployeeTest.deleteTest" />
-        <item itemvalue="JUnit.DepartmentTest.getListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -420,47 +482,48 @@
       <workItem from="1569458545372" duration="7229000" />
       <workItem from="1569465942064" duration="9687000" />
       <workItem from="1569483347609" duration="17643000" />
-      <workItem from="1569545329213" duration="11343000" />
+      <workItem from="1569545329213" duration="16033000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DepartmentTest_getTest - 2019.09.26 at 17h 37m 52s.xml">
-      <configuration name="DepartmentTest.getTest" configurationId="JUnit" />
+    <history-entry file="EmployeeTest_queryTest - 2019.09.27 at 18h 23m 55s.xml">
+      <configuration name="EmployeeTest.queryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DepartmentTest_getListTest - 2019.09.26 at 17h 38m 16s.xml">
-      <configuration name="DepartmentTest.getListTest" configurationId="JUnit" />
+    <history-entry file="EmployeeTest_queryTest - 2019.09.27 at 18h 26m 00s.xml">
+      <configuration name="EmployeeTest.queryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_saveTest - 2019.09.26 at 17h 39m 06s.xml">
-      <configuration name="EmployeeTest.saveTest" configurationId="JUnit" />
+    <history-entry file="EmployeeTest_queryTest - 2019.09.27 at 18h 28m 19s.xml">
+      <configuration name="EmployeeTest.queryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_saveTest - 2019.09.26 at 17h 39m 35s.xml">
-      <configuration name="EmployeeTest.saveTest" configurationId="JUnit" />
+    <history-entry file="EmployeeTest_queryTest - 2019.09.27 at 18h 30m 21s.xml">
+      <configuration name="EmployeeTest.queryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_saveTest - 2019.09.26 at 17h 39m 50s.xml">
-      <configuration name="EmployeeTest.saveTest" configurationId="JUnit" />
+    <history-entry file="EmployeeTest_queryTest - 2019.09.27 at 18h 32m 53s.xml">
+      <configuration name="EmployeeTest.queryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_saveTest - 2019.09.26 at 17h 39m 59s.xml">
-      <configuration name="EmployeeTest.saveTest" configurationId="JUnit" />
+    <history-entry file="EmployeeTest_queryTest - 2019.09.27 at 18h 33m 49s.xml">
+      <configuration name="EmployeeTest.queryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_deleteTest - 2019.09.26 at 17h 40m 20s.xml">
-      <configuration name="EmployeeTest.deleteTest" configurationId="JUnit" />
+    <history-entry file="EmployeeTest_queryTest - 2019.09.27 at 18h 35m 07s.xml">
+      <configuration name="EmployeeTest.queryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_updateTest - 2019.09.26 at 17h 41m 09s.xml">
-      <configuration name="EmployeeTest.updateTest" configurationId="JUnit" />
+    <history-entry file="EmployeeTest_queryTest - 2019.09.27 at 18h 35m 57s.xml">
+      <configuration name="EmployeeTest.queryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_updateTest - 2019.09.26 at 17h 42m 02s.xml">
-      <configuration name="EmployeeTest.updateTest" configurationId="JUnit" />
+    <history-entry file="EmployeeTest_queryTest - 2019.09.27 at 18h 36m 53s.xml">
+      <configuration name="EmployeeTest.queryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeTest_saveTest - 2019.09.26 at 17h 42m 52s.xml">
-      <configuration name="EmployeeTest.saveTest" configurationId="JUnit" />
+    <history-entry file="EmployeeTest_queryTest - 2019.09.27 at 18h 37m 42s.xml">
+      <configuration name="EmployeeTest.queryTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46182000" />
+    <option name="totallyTimeSpent" value="50872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="760" y="23" width="1800" height="1370" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17235495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -534,13 +597,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-orm-4.1.2.RELEASE.jar!/org/springframework/orm/hibernate4/support/HibernateDaoSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/domain/Department.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -733,16 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/domain/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/domain/Department.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -778,13 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IEmployeeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/hibernate-core-4.3.5.Final.jar!/org/hibernate/Session.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
@@ -815,30 +854,6 @@
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/IEmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/impl/EmployeeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -879,18 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/EmployeeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1113#1114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/web/action/EmployeeAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="67">
@@ -901,33 +904,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IGenericDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+    <entry file="uml://JAVA/com.revanwang.ssh.rbac.dao.impl.EmployeeDAOImpl">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.revanwang.ssh.rbac.dao.impl.EmployeeDAOImpl</OriginalElement>
+          <nodes>
+            <node x="" y="">com.revanwang.ssh.rbac.dao.impl.GenericDAOImpl</node>
+            <node x="" y="">com.revanwang.ssh.rbac.dao.IGenericDAO</node>
+            <node x="" y="">com.revanwang.ssh.rbac.dao.IEmployeeDAO</node>
+            <node x="" y="">com.revanwang.ssh.rbac.dao.impl.EmployeeDAOImpl</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="212.0" y="113.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/EmployeeDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/GenericDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IGenericDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/domain/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/GenericDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/IEmployeeDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="448">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/IEmployeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/service/impl/EmployeeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/EmployeeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="74" column="18" lean-forward="true" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/query/EmployeeQueryObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/revanwang/ssh/rbac/dao/impl/EmployeeDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

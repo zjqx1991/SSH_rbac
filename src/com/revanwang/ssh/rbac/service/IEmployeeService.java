@@ -1,6 +1,7 @@
 package com.revanwang.ssh.rbac.service;
 
 import com.revanwang.ssh.rbac.domain.Employee;
+import com.revanwang.ssh.rbac.query.EmployeeQueryObject;
 
 import java.util.List;
 
@@ -15,4 +16,6 @@ public interface IEmployeeService {
     Employee get(Long id);
 
     List<Employee> getList();
+
+    List<Employee> query(EmployeeQueryObject qo);
 }

@@ -2,6 +2,7 @@ package com.revanwang.ssh.rbac.service.impl;
 
 import com.revanwang.ssh.rbac.dao.IEmployeeDAO;
 import com.revanwang.ssh.rbac.domain.Employee;
+import com.revanwang.ssh.rbac.query.EmployeeQueryObject;
 import com.revanwang.ssh.rbac.service.IEmployeeService;
 import lombok.Setter;
 
@@ -35,5 +36,10 @@ public class EmployeeServiceImpl implements IEmployeeService {
     @Override
     public List<Employee> getList() {
         return this.employeeDAO.getList();
+    }
+
+    @Override
+    public List<Employee> query(EmployeeQueryObject qo) {
+        return employeeDAO.query(qo);
     }
 }

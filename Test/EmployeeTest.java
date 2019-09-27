@@ -1,5 +1,6 @@
 import com.revanwang.ssh.rbac.domain.Department;
 import com.revanwang.ssh.rbac.domain.Employee;
+import com.revanwang.ssh.rbac.query.EmployeeQueryObject;
 import com.revanwang.ssh.rbac.service.IDepartmentService;
 import com.revanwang.ssh.rbac.service.IEmployeeService;
 import org.junit.Test;
@@ -63,6 +64,18 @@ public class EmployeeTest {
         List<Employee> list = this.employeeService.getList();
         for (Employee emp : list) {
             System.out.println("emp = " + emp);
+        }
+    }
+
+
+    @Test
+    public void queryTest() {
+        EmployeeQueryObject qo = new EmployeeQueryObject();
+        qo.setKeyword("11");
+        qo.setDepartId(3L);
+        List<Employee> list = this.employeeService.query(qo);
+        for (Employee emp : list) {
+            System.out.println("query = " + emp);
         }
     }
 

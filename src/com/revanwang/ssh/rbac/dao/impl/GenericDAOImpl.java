@@ -7,6 +7,10 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
 
+/**
+ * 封装增删改查DAO实现类
+ * @param <T> 对象类型
+ */
 public class GenericDAOImpl<T> implements IGenericDAO<T> {
 
     protected SessionFactory sessionFactory;
