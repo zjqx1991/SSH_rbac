@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--
+        默认情况下，struts2中所有的对象都是由xWork容器中的ObjectFactory创建的
+    -->
+<!--    <bean class="com.opensymphony.xwork2.ObjectFactory" name="struts"/>-->
+
+    <!--  5、Action  -->
+    <!--  EmployeeAction  -->
+    <bean id="employeeAction" class="com.revanwang.ssh.rbac.web.action.EmployeeAction" scope="prototype">
+        <property name="employeeService" ref="employeeService"/>
+        <property name="departmentService" ref="departmentService"/>
+    </bean>
+    <!--  DepartmentAction  -->
+    <bean id="departmentAction" class="com.revanwang.ssh.rbac.web.action.DepartmentAction" scope="prototype">
+        <property name="departmentService" ref="departmentService"/>
+    </bean>
+
+</beans>
+
