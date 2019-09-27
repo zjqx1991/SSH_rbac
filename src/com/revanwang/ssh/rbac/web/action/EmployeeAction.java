@@ -1,7 +1,9 @@
 package com.revanwang.ssh.rbac.web.action;
 
+import com.mysql.cj.x.protobuf.MysqlxPrepare;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.Preparable;
 import com.revanwang.ssh.rbac.domain.Department;
 import com.revanwang.ssh.rbac.domain.Employee;
 import com.revanwang.ssh.rbac.service.IDepartmentService;
@@ -12,7 +14,7 @@ import lombok.Setter;
 import java.util.List;
 
 
-public class EmployeeAction extends ActionSupport {
+public class EmployeeAction extends ActionSupport implements Preparable {
 
     private final String LIST = "list";
 
@@ -57,7 +59,6 @@ public class EmployeeAction extends ActionSupport {
      */
     public String saveOrUpdate() {
         System.out.println("DepartmentAction.saveOrUpdate" + employee);
-        Department d = departmentService.get(employee.getDepartment().getId());
         if (employee.getId() == null) {
             //新增Employee
             employeeService.save(employee);
@@ -68,4 +69,24 @@ public class EmployeeAction extends ActionSupport {
         return SUCCESS;
     }
 
+
+    /**
+     * 会拦截所有的方法
+     * 会在所有action执行前执行
+     */
+    @Override
+    public void prepare() throws Exception {
+    }
+
+    /**
+     * 只会在 saveOrUpdate方法执行前执行
+     * 默认拦截器栈defaultStack，prepare拦截器是在params拦截器前
+     * 所以在执行prepareSaveOrUpdate的时候是无法拿到参数值，所以
+     * 需要换一个拦截器栈paramsPrepareParamsStack
+     */
+    public void prepareSaveOrUpdate() {
+        if (employee.getId() != null) {
+            employee = employeeService.get(employee.getId());
+        }
+    }
 }

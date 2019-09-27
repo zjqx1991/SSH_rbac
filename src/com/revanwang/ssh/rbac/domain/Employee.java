@@ -21,7 +21,10 @@ public class Employee {
         return "Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
                 ", age=" + age +
+                ", admin=" + admin +
                 ", department=" + department +
                 '}';
     }

@@ -10,6 +10,10 @@
     <constant name="struts.ui.theme" value="simple"></constant>
 
     <package name="default" namespace="/" extends="struts-default">
+        <!--拦截器栈
+            在执行prepare拦截器前执行params拦截器
+        -->
+        <default-interceptor-ref name="paramsPrepareParamsStack"></default-interceptor-ref>
         <!--通配符-->
         <global-allowed-methods>regex:.*</global-allowed-methods>
 
