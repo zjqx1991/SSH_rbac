@@ -21,8 +21,8 @@ public class DepartmentServiceImpl implements IDepartmentService {
     }
 
     @Override
-    public void delete(Department d) {
-        this.departmentDAO.delete(d);
+    public void delete(Long id) {
+        this.departmentDAO.delete(id);
     }
 
     @Override

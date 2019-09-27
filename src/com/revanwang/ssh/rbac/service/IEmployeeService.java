@@ -8,7 +8,7 @@ public interface IEmployeeService {
 
     void save(Employee e);
 
-    void delete(Employee e);
+    void delete(Long id);
 
     void update(Employee e);
 

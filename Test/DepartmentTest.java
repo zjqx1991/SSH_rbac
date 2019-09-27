@@ -28,9 +28,7 @@ public class DepartmentTest {
 
     @Test
     public void deleteTest() {
-        Department depart = new Department();
-        depart.setId(1L);
-        this.departmentService.delete(depart);
+        this.departmentService.delete(1L);
     }
 
 

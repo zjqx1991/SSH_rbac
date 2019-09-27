@@ -45,7 +45,7 @@ public class EmployeeAction extends BaseAction {
     public String delete() {
         System.out.println("DepartmentAction.delete" + employee);
         if (employee.getId() != null) {
-            employeeService.delete(employee);
+            employeeService.delete(employee.getId());
         }
         return SUCCESS;
     }

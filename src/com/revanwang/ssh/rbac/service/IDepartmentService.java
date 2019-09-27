@@ -9,7 +9,7 @@ public interface IDepartmentService {
 
     void save(Department d);
 
-    void delete(Department d);
+    void delete(Long id);
 
     void update(Department d);
 

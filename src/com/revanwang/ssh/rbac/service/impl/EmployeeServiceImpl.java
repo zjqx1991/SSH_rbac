@@ -18,8 +18,8 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
     @Override
-    public void delete(Employee e) {
-        this.employeeDAO.delete(e);
+    public void delete(Long id) {
+        this.employeeDAO.delete(id);
     }
 
     @Override

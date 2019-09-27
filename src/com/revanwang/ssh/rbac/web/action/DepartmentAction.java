@@ -43,7 +43,7 @@ public class DepartmentAction extends BaseAction {
     public String delete() {
         System.out.println("DepartmentAction.delete" + department);
         if (this.department.getId() != null) {
-            departmentService.delete(department);
+            departmentService.delete(department.getId());
         }
         return SUCCESS;
     }

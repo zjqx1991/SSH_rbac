@@ -36,9 +36,7 @@ public class EmployeeTest {
 
     @Test
     public void deleteTest() {
-        Employee emp = new Employee();
-        emp.setId(1L);
-        this.employeeService.delete(emp);
+        this.employeeService.delete(1L);
     }
 
     @Test
