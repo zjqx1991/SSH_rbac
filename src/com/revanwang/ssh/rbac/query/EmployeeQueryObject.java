@@ -15,7 +15,7 @@ public class EmployeeQueryObject {
     //保存高级查询参数
     private List<Object> params = new ArrayList();
     //保存高级查询条件
-    private List<String> condition = new ArrayList<>();
+    private List<String> conditions = new ArrayList<>();
 
     /**
      * @return 查询条件
@@ -24,7 +24,7 @@ public class EmployeeQueryObject {
         System.out.println("EmployeeQueryObject.getQueryCondition" + keyword + "__" + departId);
         if (hasLength(keyword)) {
             //拼接查询条件(姓名或者邮箱)
-            condition.add("(obj.name LIKE ? OR obj.email LIKE ?)");
+            conditions.add("(obj.name LIKE ? OR obj.email LIKE ?)");
             //姓名参数值
             params.add("%" + keyword + "%");      //姓名
             params.add("%" + keyword + "%");      //邮箱
@@ -32,7 +32,7 @@ public class EmployeeQueryObject {
 
         if (departId > 0) {
             //条件：部门
-            condition.add("obj.department.id = ?");
+            conditions.add("obj.department.id = ?");
             //参数：部门id
             params.add(departId);
         }
@@ -43,7 +43,7 @@ public class EmployeeQueryObject {
         }
         //查询条件
         StringBuilder stringBuilder = new StringBuilder(80);
-        for (int i = 0; i < condition.size(); i++) {
+        for (int i = 0; i < conditions.size(); i++) {
             //第一个拼接 WHERE
             if (i == 0) {
                 stringBuilder.append(" WHERE ");
@@ -52,7 +52,7 @@ public class EmployeeQueryObject {
                 stringBuilder.append(" AND ");
             }
 
-            stringBuilder.append(condition.get(i));
+            stringBuilder.append(conditions.get(i));
         }
         System.out.println(stringBuilder.toString());
         return stringBuilder.toString();

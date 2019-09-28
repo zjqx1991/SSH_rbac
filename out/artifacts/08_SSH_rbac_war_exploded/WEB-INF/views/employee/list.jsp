@@ -47,9 +47,9 @@
                     <div id="box_top">搜索</div>
                     <div id="box_center">
                         姓名/邮箱
-                        <input name="qo.keyword" class="ui_input_txt02"/>
+                        <s:textfield name="qo.keyword" cssClass="ui_input_txt02"/>
                         所属部门
-                        <s:select list="#depts" name="qo.deptId"
+                        <s:select list="#depts" name="qo.departId"
                                   headerKey="-1" headerValue="全部部门"
                                   listKey="id" listValue="name" cssClass="ui_select01"/>
                     </div>
