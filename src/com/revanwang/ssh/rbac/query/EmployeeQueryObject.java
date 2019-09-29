@@ -12,6 +12,11 @@ public class EmployeeQueryObject {
     @Setter @Getter
     private Long    departId = 0L;  //部门id
 
+    @Setter @Getter
+    private int        currentPage = 1;    //当前页
+    @Setter @Getter
+    private int        pageSize = 5;       //每页个数
+
     //保存高级查询参数
     private List<Object> params = new ArrayList();
     //保存高级查询条件

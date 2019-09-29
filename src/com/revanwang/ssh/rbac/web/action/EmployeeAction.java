@@ -4,6 +4,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.revanwang.ssh.rbac.domain.Department;
 import com.revanwang.ssh.rbac.domain.Employee;
 import com.revanwang.ssh.rbac.query.EmployeeQueryObject;
+import com.revanwang.ssh.rbac.query.PageResult;
 import com.revanwang.ssh.rbac.service.IDepartmentService;
 import com.revanwang.ssh.rbac.service.IEmployeeService;
 import lombok.Getter;
@@ -26,11 +27,12 @@ public class EmployeeAction extends BaseAction {
 
     @Override
     public String execute() throws Exception {
-        System.out.println("EmployeeAction.execute");
-//        List<Employee> employees = employeeService.getList();
-        List<Employee> employees = employeeService.query(qo);
+//        List<Employee> employees = employeeService.getList();     //获取全部数据
+//        List<Employee> employees = employeeService.query(qo);       //使用高级查询获取
+//        PageResult pageResult = employeeService.queryPage((long) currentPage, 5L);
+        PageResult pageResult = employeeService.queryPage(qo);
+        ActionContextPut("pageResult", pageResult);
         List<Department> departments = departmentService.getList();
-        ActionContextPut("employees", employees);
         ActionContextPut("depts", departments);
         return LIST;
     }

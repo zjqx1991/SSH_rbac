@@ -25,20 +25,45 @@ public class EmployeeDAOImpl extends GenericDAOImpl<Employee> implements IEmploy
     }
 
     @Override
-    public PageResult queryPage(Long currentPage, Long pageSize) {
+    public PageResult queryPage1(int currentPage, int pageSize) {
         //查询总个数
         String countHql = "SELECT COUNT(obj) FROM Employee obj";
-        Long totalCount = (Long) sessionFactory.getCurrentSession().createQuery(countHql).uniqueResult();
-        if (totalCount == null) {
-            return new PageResult(0L, Collections.emptyList(), currentPage, pageSize);
+        int totalCount = (int) sessionFactory.getCurrentSession().createQuery(countHql).uniqueResult();
+        if (totalCount == 0) {
+            return PageResult.empty();
         }
 
         //查询所以记录
         String resultHql = "SELECT obj FROM Employee obj";
         Query query = sessionFactory.getCurrentSession().createQuery(resultHql);
+        System.out.println("EmployeeDAOImpl.queryPage:" + currentPage + ":__:" + pageSize);
         if (currentPage > 0 && pageSize > 0) {
             query.setFirstResult(Math.toIntExact((currentPage - 1) * pageSize))
                     .setMaxResults(Math.toIntExact(pageSize));
+        }
+        List<Employee> resultList = query.list();
+
+        return new PageResult(totalCount, resultList, currentPage, pageSize);
+    }
+
+    @Override
+    public PageResult queryPage(EmployeeQueryObject qo) {
+        int currentPage = qo.getCurrentPage();
+        int pageSize    = qo.getPageSize();
+        //查询总个数
+        String countHql = "SELECT COUNT(obj) FROM Employee obj";
+        int totalCount = ((Long)sessionFactory.getCurrentSession().createQuery(countHql).uniqueResult()).intValue();
+        if (totalCount == 0) {
+            return PageResult.empty();
+        }
+
+        //查询所以记录
+        String resultHql = "SELECT obj FROM Employee obj";
+        Query query = sessionFactory.getCurrentSession().createQuery(resultHql);
+        System.out.println("EmployeeDAOImpl.queryPage:" + currentPage + ":__:" + pageSize);
+        if (currentPage > 0 && pageSize > 0) {
+            query.setFirstResult((currentPage - 1) * pageSize)
+                    .setMaxResults(pageSize);
         }
         List<Employee> resultList = query.list();
 

@@ -86,7 +86,7 @@ public class EmployeeTest {
 
     @Test
     public void queryPageTest() {
-        PageResult pageResult = employeeService.queryPage(2L, 3L);
+        PageResult pageResult = employeeService.queryPage1(2, 3);
         List<Employee> list = pageResult.getResult();
         for (Employee emp : list) {
             System.out.println("query = " + emp);

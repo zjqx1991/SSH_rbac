@@ -27,5 +27,12 @@ public interface IEmployeeService {
      * @param pageSize      每页个数
      * @return  分页查询结果对象
      */
-    PageResult queryPage(Long currentPage, Long pageSize);
+    PageResult queryPage1(int currentPage, int pageSize);
+
+
+    /**
+     * @param qo 封装Employee的高级查询和分页查询信息
+     * @return  分页查询结果
+     */
+    PageResult queryPage(EmployeeQueryObject qo);
 }

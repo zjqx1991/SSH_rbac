@@ -75,7 +75,7 @@
                         <th></th>
                     </tr>
                     <tbody>
-                    <s:iterator value="#employees">
+                    <s:iterator value="#pageResult.result">
                         <tr>
                             <td><input type="checkbox" name="IDCheck" class="acb"/></td>
                             <td><s:property value="id"/> </td>
@@ -106,7 +106,7 @@
                 <div class="ui_frt">
                     <input type="button" value="首页" class="ui_input_btn01 btn_page" data-page="1"/>
                     <input type="button" value="上一页" class="ui_input_btn01 btn_page"
-                           data-page='<s:property value="#pageResult.prevPage"/>'/>
+                           data-page='<s:property value="#pageResult.previousPage"/>'/>
                     <input type="button" value="下一页" class="ui_input_btn01 btn_page"
                            data-page='<s:property value="#pageResult.nextPage"/>'/>
                     <input type="button" value="尾页" class="ui_input_btn01 btn_page"
