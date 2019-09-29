@@ -1,9 +1,7 @@
 package com.revanwang.ssh.rbac.query;
 
-import com.revanwang.ssh.rbac.domain.Employee;
 import lombok.Getter;
 import lombok.Setter;
-import sun.jvm.hotspot.debugger.Page;
 
 import java.util.Collections;
 import java.util.List;
@@ -11,11 +9,11 @@ import java.util.List;
 /**
  * 封装分页查询信息
  */
-public class PageResult {
+public class QueryResult {
     @Setter @Getter
     private int        totalCount;     //总数据个数：SQL查询
     @Setter @Getter
-    private List<Employee>  result;     //获取数据：SQL查询
+    private List  result;     //获取数据：SQL查询
     @Setter @Getter
     private int        currentPage;    //当前页
     @Setter @Getter
@@ -28,7 +26,7 @@ public class PageResult {
     @Setter @Getter
     private int        nextPage;       //下一页
 
-    public PageResult(int totalCount, List<Employee> result, int currentPage, int pageSize) {
+    public QueryResult(int totalCount, List result, int currentPage, int pageSize) {
         this.totalCount = totalCount;
         this.result = result;
         this.currentPage = currentPage;
@@ -42,7 +40,7 @@ public class PageResult {
         this.nextPage = this.currentPage + 1 > this.totalPage ? this.totalPage : this.currentPage + 1;
     }
 
-    public static PageResult empty() {
-        return new PageResult(0, Collections.emptyList(), 1, 5);
+    public static QueryResult empty() {
+        return new QueryResult(0, Collections.emptyList(), 1, 5);
     }
 }

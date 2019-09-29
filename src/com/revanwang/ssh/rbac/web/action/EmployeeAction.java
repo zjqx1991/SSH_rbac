@@ -1,10 +1,9 @@
 package com.revanwang.ssh.rbac.web.action;
 
-import com.opensymphony.xwork2.ActionContext;
 import com.revanwang.ssh.rbac.domain.Department;
 import com.revanwang.ssh.rbac.domain.Employee;
 import com.revanwang.ssh.rbac.query.EmployeeQueryObject;
-import com.revanwang.ssh.rbac.query.PageResult;
+import com.revanwang.ssh.rbac.query.QueryResult;
 import com.revanwang.ssh.rbac.service.IDepartmentService;
 import com.revanwang.ssh.rbac.service.IEmployeeService;
 import lombok.Getter;
@@ -27,7 +26,7 @@ public class EmployeeAction extends BaseAction {
 
     @Override
     public String execute() throws Exception {
-        PageResult pageResult = employeeService.query(qo);
+        QueryResult pageResult = employeeService.query(qo);
         ActionContextPut("pageResult", pageResult);
         List<Department> departments = departmentService.getList();
         ActionContextPut("depts", departments);

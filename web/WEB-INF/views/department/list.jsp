@@ -68,29 +68,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="ui_tb_h30">
-                <div class="ui_flt" style="height: 30px; line-height: 30px;">
-                    共有
-                    <span class="ui_txt_bold04">100</span>
-                    条记录，当前第
-                    <span class="ui_txt_bold04">1/10</span>
-                    页
-                </div>
-                <div class="ui_frt">
-                    <input type="button" value="首页" class="ui_input_btn01"/>
-                    <input type="button" value="上一页" class="ui_input_btn01"/>
-                    <input type="button" value="下一页" class="ui_input_btn01"/>
-                    <input type="button" value="尾页" class="ui_input_btn01"/>
-
-                    <select list="{10,20,50}" name="" class="ui_select02">
-                        <option>10</option>
-                        <option>20</option>
-                        <option>50</option>
-                    </select>
-                    转到第<input type="text" name="" value="" class="ui_input_txt01" />页
-                    <input type="button" class="ui_input_btn01" value="跳转"/>
-                </div>
-            </div>
+            <%@include file="/WEB-INF/views/common/common_page.jsp"%>
         </div>
     </div>
 </form>
