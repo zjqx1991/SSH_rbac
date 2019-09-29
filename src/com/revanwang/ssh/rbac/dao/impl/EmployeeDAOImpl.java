@@ -6,61 +6,30 @@ import com.revanwang.ssh.rbac.query.EmployeeQueryObject;
 import com.revanwang.ssh.rbac.query.PageResult;
 import org.hibernate.Query;
 
-import java.util.Collections;
 import java.util.List;
 
 public class EmployeeDAOImpl extends GenericDAOImpl<Employee> implements IEmployeeDAO {
 
     @Override
-    public List<Employee> query(EmployeeQueryObject qo) {
-        //高级查询条件
-        String hql = "SELECT obj FROM Employee obj" + qo.getQueryCondition();
-        Query query = sessionFactory.getCurrentSession().createQuery(hql);
-        //高级查询设置参数
-        List<Object> params = qo.getQueryParams();
-        for (int i = 0; i < params.size(); i++) {
-            query.setParameter(i, params.get(i));
-        }
-        return query.list();
-    }
-
-    @Override
-    public PageResult queryPage1(int currentPage, int pageSize) {
-        //查询总个数
-        String countHql = "SELECT COUNT(obj) FROM Employee obj";
-        int totalCount = (int) sessionFactory.getCurrentSession().createQuery(countHql).uniqueResult();
-        if (totalCount == 0) {
-            return PageResult.empty();
-        }
-
-        //查询所以记录
-        String resultHql = "SELECT obj FROM Employee obj";
-        Query query = sessionFactory.getCurrentSession().createQuery(resultHql);
-        System.out.println("EmployeeDAOImpl.queryPage:" + currentPage + ":__:" + pageSize);
-        if (currentPage > 0 && pageSize > 0) {
-            query.setFirstResult(Math.toIntExact((currentPage - 1) * pageSize))
-                    .setMaxResults(Math.toIntExact(pageSize));
-        }
-        List<Employee> resultList = query.list();
-
-        return new PageResult(totalCount, resultList, currentPage, pageSize);
-    }
-
-    @Override
-    public PageResult queryPage(EmployeeQueryObject qo) {
+    public PageResult query(EmployeeQueryObject qo) {
         int currentPage = qo.getCurrentPage();
         int pageSize    = qo.getPageSize();
         //查询总个数
-        String countHql = "SELECT COUNT(obj) FROM Employee obj";
-        int totalCount = ((Long)sessionFactory.getCurrentSession().createQuery(countHql).uniqueResult()).intValue();
+        String countHql = "SELECT COUNT(obj) FROM Employee obj" + qo.getQueryCondition();
+        Query countQuery = sessionFactory.getCurrentSession().createQuery(countHql);
+        //给SQL语句占位符设值
+        setupQueryParam(qo, countQuery);
+
+        int totalCount = ((Long)countQuery.uniqueResult()).intValue();
         if (totalCount == 0) {
             return PageResult.empty();
         }
 
         //查询所以记录
-        String resultHql = "SELECT obj FROM Employee obj";
+        String resultHql = "SELECT obj FROM Employee obj" + qo.getQueryCondition();
         Query query = sessionFactory.getCurrentSession().createQuery(resultHql);
-        System.out.println("EmployeeDAOImpl.queryPage:" + currentPage + ":__:" + pageSize);
+        //给SQL语句占位符设值
+        setupQueryParam(qo, query);
         if (currentPage > 0 && pageSize > 0) {
             query.setFirstResult((currentPage - 1) * pageSize)
                     .setMaxResults(pageSize);
@@ -68,5 +37,16 @@ public class EmployeeDAOImpl extends GenericDAOImpl<Employee> implements IEmploy
         List<Employee> resultList = query.list();
 
         return new PageResult(totalCount, resultList, currentPage, pageSize);
+    }
+
+    /**
+     * 为SQL语句参数赋值
+     * @param qo 查询对象
+     * @param query
+     */
+    private void setupQueryParam(EmployeeQueryObject qo, Query query) {
+        for (int i = 0; i < qo.getQueryParams().size(); i++) {
+            query.setParameter(i, qo.getQueryParams().get(i));
+        }
     }
 }

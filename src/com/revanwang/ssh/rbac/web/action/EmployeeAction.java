@@ -27,10 +27,7 @@ public class EmployeeAction extends BaseAction {
 
     @Override
     public String execute() throws Exception {
-//        List<Employee> employees = employeeService.getList();     //获取全部数据
-//        List<Employee> employees = employeeService.query(qo);       //使用高级查询获取
-//        PageResult pageResult = employeeService.queryPage((long) currentPage, 5L);
-        PageResult pageResult = employeeService.queryPage(qo);
+        PageResult pageResult = employeeService.query(qo);
         ActionContextPut("pageResult", pageResult);
         List<Department> departments = departmentService.getList();
         ActionContextPut("depts", departments);

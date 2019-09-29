@@ -71,22 +71,12 @@ public class EmployeeTest {
         }
     }
 
-
     @Test
-    public void queryTest() {
+    public void queryPageTest() {
         EmployeeQueryObject qo = new EmployeeQueryObject();
         qo.setKeyword("11");
         qo.setDepartId(3L);
-        List<Employee> list = this.employeeService.query(qo);
-        for (Employee emp : list) {
-            System.out.println("query = " + emp);
-        }
-    }
-
-
-    @Test
-    public void queryPageTest() {
-        PageResult pageResult = employeeService.queryPage1(2, 3);
+        PageResult pageResult = employeeService.query(qo);
         List<Employee> list = pageResult.getResult();
         for (Employee emp : list) {
             System.out.println("query = " + emp);

@@ -40,19 +40,8 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
     @Override
-    public List<Employee> query(EmployeeQueryObject qo) {
+    public PageResult query(EmployeeQueryObject qo) {
         return employeeDAO.query(qo);
     }
-
-    @Override
-    public PageResult queryPage1(int currentPage, int pageSize) {
-        return employeeDAO.queryPage1(currentPage, pageSize);
-    }
-
-    @Override
-    public PageResult queryPage(EmployeeQueryObject qo) {
-        return employeeDAO.queryPage(qo);
-    }
-
 
 }
