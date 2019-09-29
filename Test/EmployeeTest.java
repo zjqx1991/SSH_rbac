@@ -1,6 +1,7 @@
 import com.revanwang.ssh.rbac.domain.Department;
 import com.revanwang.ssh.rbac.domain.Employee;
 import com.revanwang.ssh.rbac.query.EmployeeQueryObject;
+import com.revanwang.ssh.rbac.query.PageResult;
 import com.revanwang.ssh.rbac.service.IDepartmentService;
 import com.revanwang.ssh.rbac.service.IEmployeeService;
 import org.junit.Test;
@@ -25,13 +26,16 @@ public class EmployeeTest {
     @Test
     public void saveTest() {
 
-        Department department = this.departmentService.get(2L);
+        for (int i = 0; i < 24; i++) {
 
-        Employee emp = new Employee();
-        emp.setName("段誉");
-        emp.setAge(79);
-        emp.setDepartment(department);
-        this.employeeService.save(emp);
+            Department department = this.departmentService.get((long) (i % 2) + 2);
+
+            Employee emp = new Employee();
+            emp.setName("test_" + i);
+            emp.setAge(79);
+            emp.setDepartment(department);
+            this.employeeService.save(emp);
+        }
     }
 
 
@@ -79,4 +83,13 @@ public class EmployeeTest {
         }
     }
 
+
+    @Test
+    public void queryPageTest() {
+        PageResult pageResult = employeeService.queryPage(2L, 3L);
+        List<Employee> list = pageResult.getResult();
+        for (Employee emp : list) {
+            System.out.println("query = " + emp);
+        }
+    }
 }
