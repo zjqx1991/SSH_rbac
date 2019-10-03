@@ -60,7 +60,7 @@ public class GenericDAOImpl<T> implements IGenericDAO<T> {
 
 
     @Override
-    public QueryResult query(abstractQueryObject qo) {
+    public QueryResult<T> query(abstractQueryObject qo) {
         int currentPage = qo.getCurrentPage();
         int pageSize    = qo.getPageSize();
         //查询总个数
@@ -86,6 +86,60 @@ public class GenericDAOImpl<T> implements IGenericDAO<T> {
         List<T> resultList = query.list();
 
         return new QueryResult(totalCount, resultList, currentPage, pageSize);
+    }
+
+    @Override
+    public QueryResult<T> query(int currentPage, int pageSize, String queryCondition, Object... queryParams) {
+
+        //查询所以记录
+        StringBuilder sb = new StringBuilder(90);
+        sb.append("SELECT obj FROM ").append(targetClass.getSimpleName()).append(" obj ");
+
+        //判断是否有查询条件
+        if (queryCondition != null && queryCondition.trim().length() > 0) {
+            sb.append(queryCondition);
+        }
+
+        Query query = sessionFactory.getCurrentSession().createQuery(sb.toString());
+        //给SQL语句占位符设值
+        for (int i = 0; i < queryParams.length; i++) {
+            query.setParameter(i, queryParams[i]);
+        }
+
+        //设置查询结果
+        if (currentPage > 0 && pageSize > 0) {
+            query.setFirstResult((currentPage - 1) * pageSize)
+                    .setMaxResults(pageSize);
+        }
+        List<T> resultList = query.list();
+        return new QueryResult<>(resultList.size(), resultList, currentPage, pageSize);
+    }
+
+    @Override
+    public QueryResult<T> query(String queryCondition, Object... queryParams) {
+
+        //查询所以记录
+        StringBuilder sb = new StringBuilder(90);
+        sb.append("SELECT obj FROM ").append(targetClass.getSimpleName()).append(" obj ");
+
+        //判断是否有查询条件
+        if (queryCondition != null && queryCondition.trim().length() > 0) {
+            sb.append(queryCondition);
+        }
+
+        Query query = sessionFactory.getCurrentSession().createQuery(sb.toString());
+        //给SQL语句占位符设值
+        for (int i = 0; i < queryParams.length; i++) {
+            query.setParameter(i, queryParams[i]);
+        }
+        List<T> resultList = query.list();
+        return new QueryResult(resultList.size(), resultList, -1, -1);
+    }
+
+    @Override
+    public T queryRowMapping(String queryCondition, Object... queryParams) {
+        List<T> list = query(queryCondition, queryParams).getResult();
+        return list.size() == 1 ? list.get(0) : null;
     }
 
     /**

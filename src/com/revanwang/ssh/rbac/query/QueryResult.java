@@ -9,11 +9,11 @@ import java.util.List;
 /**
  * 封装分页查询信息
  */
-public class QueryResult {
+public class QueryResult<T> {
     @Setter @Getter
     private int        totalCount;     //总数据个数：SQL查询
     @Setter @Getter
-    private List  result;     //获取数据：SQL查询
+    private List<T>  result;     //获取数据：SQL查询
     @Setter @Getter
     private int        currentPage;    //当前页
     @Setter @Getter
@@ -26,7 +26,7 @@ public class QueryResult {
     @Setter @Getter
     private int        nextPage;       //下一页
 
-    public QueryResult(int totalCount, List result, int currentPage, int pageSize) {
+    public QueryResult(int totalCount, List<T> result, int currentPage, int pageSize) {
         this.totalCount = totalCount;
         this.result = result;
         this.currentPage = currentPage;
@@ -44,3 +44,4 @@ public class QueryResult {
         return new QueryResult(0, Collections.emptyList(), 1, 5);
     }
 }
+
